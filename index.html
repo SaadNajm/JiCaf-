@@ -9,13 +9,12 @@
 
     <style>
 
-        body {
-            margin: 0;
-            font-family: "Pixelify Sans", sans-serif; 
-            text-align: center;
-            background-color: #6F4E37;
-        }
-
+body {
+    margin: 0;
+    font-family: "Pixelify Sans", sans-serif; 
+    text-align: center;
+    background-color: #6F4E37;
+}
         header {
             margin: 0; 
             padding: 0; 
@@ -25,32 +24,33 @@
             color: #5e0c0c;
         }
         .welcome{
-            font-family: "Pixelify Sans", sans-serif; 
-            background-color: bisque;
-            border-radius: 15px;
-            padding: 1px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            margin: 20px auto;
-            max-width: 780px; 
-        }
-        .welcome h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            transition: color 0.5s, text-shadow 0.5s;
-            color: #5e0c0c;
-        }
+    font-family: "Pixelify Sans", sans-serif; 
+    background-color: bisque;
+    border-radius: 15px;
+    padding: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 20px auto;
+    max-width: 780px; 
+}
+.welcome h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: color 0.5s, text-shadow 0.5s;
+    color: #5e0c0c;
+}
         .welcome h1:hover {
             color: #281208ad;
             text-shadow: 2px 2px 6px rgba(78, 13, 13, 0.7);
         }
-        .menu-section{
-            background-color: 	#F0E68C;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            margin: 20px auto;
-            
-        }
+        .menu-section {
+    background-color: #F0E68C;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 20px auto;
+    max-width: 90%; /* Ensures it fits well on mobile screens */
+    overflow: hidden; /* Prevents overflow of content */
+}
         .menu-section h2 {
             font-size: 2.0rem;
             font-weight: bold;
@@ -121,12 +121,14 @@
         }
         
         .itemimg {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            height: 120px;
-            justify-content: space-between;
-        }
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
+}
+
         .itemimg img {
             width: 120px;
             height: auto;
@@ -243,6 +245,15 @@
         footer a:hover {
             color: #c97a63;
         }
+        
+@media screen and (max-width: 600px) {
+    .itemimg p {
+        font-size: 1.2rem;
+    }
+    .itemimg img {
+        width: 100px; /* Adjusts the image size for smaller screens */
+    }
+}
 
     </style>
     <title>JiJiCafé</title>
